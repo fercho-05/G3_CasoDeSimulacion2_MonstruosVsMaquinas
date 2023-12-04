@@ -32,13 +32,16 @@ public class EnemyController : MonoBehaviour
 				 * ya que le indica cuantos enemigos bajo: */
 				Debug.Log(_Cantidad);
 
-				/*Condición: si la variable _Cantidad es igual a 25 -
+				//Conteo externo para mostrar por si se pierde
+                StateManager.Instance.setCantidadEnemigosDerrotados(_Cantidad);
+
+                /*Condición: si la variable _Cantidad es igual a 25 -
 				 * (que serian los enemigos totales), entonces mande a -
 				 * llamar al método: Victoria()*/
-				if (_Cantidad == 25)
+                if (_Cantidad == 25)
 				{
 					Victoria();
-				}
+                }
 			}
 			else
 			{

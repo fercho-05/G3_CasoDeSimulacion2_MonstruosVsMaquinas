@@ -6,10 +6,12 @@ public class StateManager : Singleton<StateManager>
 {
     int _Cantidad = 0;
 
-   /* protected override void Awake()
-    {
-        base.Awake();
-    }*/
+    int _CantidadEnemigos = 0;
+
+    /* protected override void Awake()
+     {
+         base.Awake();
+     }*/
 
     public int getCantidad()
     {
@@ -19,5 +21,16 @@ public class StateManager : Singleton<StateManager>
     public void setCantidad(int newCantidad)
     {
 		_Cantidad = newCantidad;
+    }
+
+
+    public int getCantidadEnemigosDerrotados()
+    {
+        return _CantidadEnemigos;
+    }
+
+    public void setCantidadEnemigosDerrotados(int newCantidad)
+    {
+        _CantidadEnemigos = newCantidad;
     }
 }
